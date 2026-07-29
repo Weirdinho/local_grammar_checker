@@ -1,0 +1,19 @@
+pyyaml>=6.0
+fastapi>=0.110
+uvicorn>=0.29
+pydantic>=2.6
+aiofiles>=23.2
+
+# Tier 2 — local in-process inference of your GGUF, no server/internet needed
+# after this installs. On Windows, if you hit a WinError 193 DLL error, see
+# README troubleshooting notes.
+llama-cpp-python>=0.2.90
+
+# optional, only needed if you wire up the KenLM perplexity scorer in Tier 1
+# kenlm>=0.2.0
+
+# NOT needed anymore — semantic matching (LaBSE) is disabled for offline use.
+# Only re-enable these + set semantic.enabled: true in config.yaml if you
+# have internet access for the one-time ~1.8GB model download.
+# sentence-transformers>=3.0
+# numpy>=1.26

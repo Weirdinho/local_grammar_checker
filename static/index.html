@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N-ATLaS Grammar Checker</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-row">
+      <div class="brand">
+        <span class="brand-mark">Offline Grammar Review</span>
+        <span class="brand-sub">Powered by N-ATLaS</span>
+      </div>
+      <div class="lang-tabs" role="tablist" aria-label="Language">
+        <button class="lang-tab active" data-lang="yo" role="tab" aria-selected="true">Yorùbá</button>
+        <button class="lang-tab" data-lang="ig" role="tab" aria-selected="false">Igbo</button>
+        <button class="lang-tab" data-lang="ha" role="tab" aria-selected="false">Hausa</button>
+      </div>
+    </div>
+    <div class="stripe-bar" id="stripeBar" aria-hidden="true">
+      <div class="stripe-fill" id="stripeFill"></div>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <section class="editor-pane">
+      <div class="editor-toolbar">
+        <button id="checkBtn" class="btn btn-primary">Check text</button>
+        <button id="acceptAllBtn" class="btn btn-ghost" disabled>Accept all suggestions</button>
+        <button id="downloadBtn" class="btn btn-ghost" disabled>Download .txt</button>
+        <span class="status" id="statusMsg"></span>
+      </div>
+      <div class="readability-panel" id="readabilityPanel" style="display:none;">
+        <div class="readability-score" id="readabilityBefore"></div>
+        <div class="readability-score" id="readabilityAfter"></div>
+      </div>
+      <div class="editor-wrap">
+        <div id="editorHighlight" class="editor-highlight" aria-hidden="true"></div>
+        <textarea id="editor" class="editor"
+          placeholder="Kọ ọ̀rọ̀ rẹ sí ibí… / Write your text here…"
+          spellcheck="false"></textarea>
+      </div>
+    </section>
+
+    <aside class="suggestions-pane">
+      <div class="suggestions-head">
+        <h2>Suggestions</h2>
+        <span class="count-pill" id="countPill">0</span>
+      </div>
+      <div class="suggestions-list" id="suggestionsList">
+        <p class="empty-state">Write something, then press <strong>Check text</strong>. Flagged sentences will show up here with a suggested fix and why.</p>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="app-footer">
+    <span>Yorùbá · Igbo · Hausa — runs fully offline, on your machine.</span>
+  </footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
