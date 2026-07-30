@@ -1,3 +1,9 @@
+
+
+https://github.com/user-attachments/assets/9736a2bc-40aa-49c2-9703-1fff40c905b3
+
+
+
 # N-ATLaS Grammar Checker (Yoruba / Igbo / Hausa) — Fully Offline
 
 A two-tier, fully offline grammar checker for Nigerian indigenous languages,
