@@ -408,3 +408,24 @@ Innovation and Digital Economy / Awarri Technologies, has a 1000-active-user
 cap before needing a commercial license, and derivatives must carry "Powered
 by Awarri" if renamed. See the
 [model card](https://huggingface.co/NCAIR1/N-ATLaS) for full terms.
+
+---
+
+## Acknowledgements
+
+**Team**
+- **Okpor Victor (Group Leader)**
+- **Yusuf Sada**
+- **Joshua Egberibo**
+- **Matilda Obot**
+- **David Adeyeni**
+- **Aminat Bakare**
+- **Asher Nzurum**
+- **Umar Ahmad**
+
+**Facilitators**
+- Victor
+- Stephen
+
+**NCAIR** — for providing the N-ATLaS model that powers this project's
+Tier 2 correction layer.
