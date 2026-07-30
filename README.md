@@ -422,6 +422,7 @@ by Awarri" if renamed. See the
 - **Aminat Bakare**
 - **Asher Nzurum**
 - **Umar Ahmad**
+- **Lasisi Abdulmalik Bolaji**
 
 **Facilitators**
 - Victor
