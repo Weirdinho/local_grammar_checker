@@ -178,7 +178,7 @@ def scan(req: ScanRequest):
 @app.post("/readability")
 def readability(req: ReadabilityRequest):
     """
-    LIX readability score — not Flesch-Kincaid, since that depends on
+    LIX readability score, since that depends on
     English-specific syllable counting. LIX only needs words-per-sentence
     and a long-word ratio, both language-agnostic. Can be called on raw
     text either before or after corrections are applied, to compare.

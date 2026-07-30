@@ -2,12 +2,12 @@
 
 llm:
   model_path: "models/n-atlas-q4_k_m.gguf"
-  n_ctx: 8092
-  n_threads: 4       # i5-8365U has 4 physical cores — try 4 first, test 8 to compare
-  n_gpu_layers: 0     # 0 = CPU only, no discrete GPU
+  n_ctx: 2048
+  n_threads: 4       
+  n_gpu_layers: 0     
   temperature: 0.1
   repeat_penalty: 1.12
-  max_new_tokens: 1024
+  max_new_tokens: 200
 
 languages:
   yo:

@@ -48,7 +48,7 @@ _EXAMPLE_RESPONSE = (
 )
 
 _SYSTEM_TEMPLATE = (
-    "You are a professional {lang} language editor. You correct grammar, "
+    "You are a professional {lang} language editor. You correct grammar, "  
     "spelling, word choice, and diacritics/tone marks in {lang} text written "
     "by native speakers.\n\n"
     "ALPHABET: {alphabet_note}\n\n"
@@ -76,7 +76,7 @@ _SYSTEM_TEMPLATE = (
     "6. Keep the explanation to ONE short sentence, under 20 words. Do not "
     "repeat words or restate the same point twice.\n\n"
     "Respond with ONLY a JSON object, no other text, in this exact field "
-    "ORDER: " + _EXAMPLE_RESPONSE + ". If has_error is false, set "
+    "ORDER: " + _EXAMPLE_RESPONSE + ". If has_error is false, set "  # pyright: ignore[reportImplicitStringConcatenation]
     '"explanation" to an empty string and "corrected" to the original '
     "sentence unchanged."
 )
@@ -110,7 +110,7 @@ class NAtlasCorrector:
             from llama_cpp import Llama
         except ImportError as e:
             raise RuntimeError(
-                "llama-cpp-python isn't installed. Run "
+                "llama-cpp-python isn't installed. Run "  # pyright: ignore[reportImplicitStringConcatenation]
                 "`pip install llama-cpp-python`, or use --tier1-only to run "
                 "without corrections."
             ) from e
@@ -118,7 +118,7 @@ class NAtlasCorrector:
         model_path = Path(model_path)
         if not model_path.exists():
             raise RuntimeError(
-                f"Model file not found at '{model_path}'. Point llm.model_path "
+                f"Model file not found at '{model_path}'. Point llm.model_path "  # pyright: ignore[reportImplicitStringConcatenation]
                 "in config.yaml at your downloaded n-atlas-q4_k_m.gguf."
             )
 
@@ -152,7 +152,7 @@ class NAtlasCorrector:
                 repeat_penalty=self.repeat_penalty,
                 max_tokens=self.max_new_tokens,
             )
-        return resp["choices"][0]["message"]["content"].strip()
+        return resp["choices"][0]["message"]["content"].strip()  # pyright: ignore[reportUnknownMemberType]
 
     def correct(self, sentence: str, lang_code: str, context: str | None = None) -> Correction:
         lang_name = _LANG_NAMES.get(lang_code, get_profile(lang_code).name)
