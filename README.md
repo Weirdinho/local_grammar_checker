@@ -431,8 +431,8 @@ by Awarri" if renamed. See the
 - **Lasisi Abdulmalik Bolaji**
 
 **Facilitators**
-- Victor
-- Stephen
+- Victor Rizama
+- Stephen Ayuba
 
 **NCAIR** — for providing the N-ATLaS model that powers this project's
 Tier 2 correction layer.
